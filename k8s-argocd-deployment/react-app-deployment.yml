@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-react-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sample-react-app
+  template:
+    metadata:
+      labels:
+        app: sample-react-app
+    spec:
+      containers:
+        - name: sample-react-app-container
+          image: prasadreddy2349/sample-react-app-arm-arch:latest # Reference public Docker Hub image here
+          ports:
+            - containerPort: 80
+          env:
+            - name: REACT_APP_ENVIRONMENT
+              value: "production"
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "250m"
+            limits:
+              memory: "1Gi"
+              cpu: "500m"
