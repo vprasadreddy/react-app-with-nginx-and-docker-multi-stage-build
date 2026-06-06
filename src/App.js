@@ -12,7 +12,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {`React App13 - ${window._env_.REACT_APP_ENVIRONMENT}`}
+          {`React App - ${window._env_.REACT_APP_ENVIRONMENT}`}
         </a>
       </header>
     </div>

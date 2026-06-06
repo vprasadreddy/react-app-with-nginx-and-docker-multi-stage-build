@@ -1,0 +1,8 @@
+# Ignore the screenshots directory in the Docker build context
+screenshots/
+
+# Ignore the k8s-argocd-deployment directory in the Docker build context
+k8s-argocd-deployment/
+
+# Ignore the README.md file in the Docker build context
+README.md
