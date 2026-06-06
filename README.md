@@ -12,7 +12,7 @@
 
    ![env-config](screenshots/1.png)
 
-1. Use window._env_.<env_variable_name> to get it's value in React .js/.jsx file. In the example below, I have referred in App.js file
+1. Use **window.\_env\_.env_variable_name** to get it's value in React .js/.jsx file. In the example below, I have referred in App.js file
 
    ```javascript
    {
