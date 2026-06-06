@@ -4,9 +4,9 @@
 
 1. Create **env-config.js.template** file in root of the project and add required environment variables that need to be set dynamically.
 
-   ```
+   ```javascript
    window._env_ = {
-   REACT_APP_ENVIRONMENT: "${REACT_APP_ENVIRONMENT}",
+     REACT_APP_ENVIRONMENT: "${REACT_APP_ENVIRONMENT}",
    };
    ```
 
@@ -14,15 +14,17 @@
 
 1. Use window._env_.<env_variable_name> to get it's value in React .js/.jsx file. In the example below, I have referred in App.js file
 
-   ```
-    {`React App - ${window._env_.REACT_APP_ENVIRONMENT}`}
+   ```javascript
+   {
+     `React App - ${window._env_.REACT_APP_ENVIRONMENT}`;
+   }
    ```
 
    ![env-config](screenshots/2.png)
 
 1. Add below script tag in [index.html](./public/index.html) file under public folder
 
-   ```
+   ```html
    <script src="%PUBLIC_URL%/env-config.js"></script>
    ```
 
@@ -30,7 +32,7 @@
 
 1. Create [Dockerfile](./Dockerfile) in the root of the project with below configuration
 
-   ```
+   ```dockerfile
    FROM node:alpine AS build
    WORKDIR /app
    COPY package.json /app/package.json
