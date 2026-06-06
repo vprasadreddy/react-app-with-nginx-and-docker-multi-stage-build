@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sample-react-app
+  name: react-app-with-nginx
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: sample-react-app
+      app: react-app-with-nginx
   template:
     metadata:
       labels:
-        app: sample-react-app
+        app: react-app-with-nginx
     spec:
       containers:
-        - name: sample-react-app-container
-          image: prasadreddy2349/sample-react-app-arm-arch:latest # Reference public Docker Hub image here
+        - name: react-app-with-nginx-container
+          image: prasadreddy2349/react-app-with-nginx:latest # Reference public Docker Hub image here
           ports:
             - containerPort: 80
           env:
